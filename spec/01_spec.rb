@@ -10,11 +10,11 @@ describe CaloriesCounter do
     end
   end
 
-  context "find_sum_of_three_biggest_values" do
+  context "sum_of_three_biggest_values" do
     it "calculates the sum of calories carried by the three elf with the most calories" do
       test_input = "./spec/test_inputs/test_input_01.txt"
       calories_counter = described_class.new(test_input)
-      expect((calories_counter).find_sum_of_three_biggest_values).to eq 45000
+      expect((calories_counter).sum_of_three_biggest_values).to eq 45000
     end
   end
 end

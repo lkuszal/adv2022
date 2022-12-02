@@ -19,7 +19,12 @@ class CaloriesCounter
   def find_biggest_value
     @elves_calories_array.max
   end
+
+  def sum_of_three_biggest_values
+    @elves_calories_array.sort.last(3).sum
+  end
 end
 
 calories_counter = CaloriesCounter.new('./lib/day_01/input')
 p calories_counter.find_biggest_value
+p calories_counter.sum_of_three_biggest_values
