@@ -20,3 +20,6 @@ class CaloriesCounter
     @elves_calories_array.max
   end
 end
+
+calories_counter = CaloriesCounter.new('./lib/day_01/input')
+p calories_counter.find_biggest_value
