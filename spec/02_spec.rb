@@ -9,4 +9,10 @@ describe RPS do
       expect(rps.calculate_guide_results).to eq 15
     end
   end
+
+  context "calculate_results_correctly" do
+    it "counts how many scores you get for following guide's strategy correctly" do
+      expect(rps.calculate_results_correctly).to eq 12
+    end
+  end
 end
