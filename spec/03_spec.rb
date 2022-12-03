@@ -6,7 +6,7 @@ describe RucksackManager do
 
   context "priority_of_duplicated_items" do
     it "get and add priorities of all duplicated items in all backpacks" do
-      expect((rucksack_manager).priority_of_duplicated_items).to eq 157
+      expect(rucksack_manager.priority_of_duplicated_items).to eq 157
     end
   end
 end
