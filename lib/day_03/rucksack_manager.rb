@@ -20,6 +20,19 @@ class RucksackManager
     sum_of_priorities
   end
 
+  def priority_of_badges
+    sum_of_priorities = 0
+    @rucksacks.each_slice(3).each do |group_rucksacks|
+      group_rucksacks[0].each_char do |item|
+        if group_rucksacks[1].include? item and group_rucksacks[2].include? item
+          sum_of_priorities += get_priority(item)
+          break
+        end
+      end
+    end
+    sum_of_priorities
+  end
+
   private
 
   def get_priority(item)
@@ -34,3 +47,4 @@ end
 
 rucksack_manager = RucksackManager.new('./lib/day_03/input')
 p rucksack_manager.priority_of_duplicated_items
+p rucksack_manager.priority_of_badges
