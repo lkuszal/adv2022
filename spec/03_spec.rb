@@ -9,4 +9,10 @@ describe RucksackManager do
       expect(rucksack_manager.priority_of_duplicated_items).to eq 157
     end
   end
+
+  context "priority_of_badges" do
+    it "finds group badges and calculate sum of their priorities" do
+      expect(rucksack_manager.priority_of_badges).to eq 70
+    end
+  end
 end
